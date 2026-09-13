@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock - Multi Timezone</title>
+  <link rel="stylesheet" href="css/clock.css">
+</head>
+<body>
+  <div class="clock-container">
+    <header class="clock-header">
+      <h1>🕐 Digital Clock</h1>
+      <p>Current time in different time zones</p>
+    </header>
+
+    <div class="controls">
+      <div class="format-toggle">
+        <label>
+          <input type="radio" name="format" value="24" checked> 24-hour
+        </label>
+        <label>
+          <input type="radio" name="format" value="12"> 12-hour
+        </label>
+      </div>
+      <button id="addTimezoneBtn" class="btn-add">+ Add Timezone</button>
+    </div>
+
+    <div class="timezone-modal hidden" id="timezoneModal">
+      <div class="modal-content">
+        <h2>Add Timezone</h2>
+        <select id="timezoneSelect">
+          <option value="">Select a timezone...</option>
+        </select>
+        <div class="modal-actions">
+          <button id="confirmBtn" class="btn-primary">Add</button>
+          <button id="cancelBtn" class="btn-secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="clock-grid" id="clockGrid"></div>
+
+    <footer class="clock-footer">
+      <p>Built with HTML5, CSS3 & JavaScript</p>
+      <a href="index.html">← Back to Pen Pro</a>
+    </footer>
+  </div>
+
+  <script src="js/clock.js"></script>
+</body>
+</html>
